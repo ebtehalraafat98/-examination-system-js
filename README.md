@@ -1,50 +1,50 @@
-📝 Simple Examinations System (Client-Side Quiz Application)
+# 📝 Simple Examinations System
 
-This project implements a dynamic, client-side quiz application built with HTML, CSS, and JavaScript, designed to meet the specified requirements for a simple, timed examination system.
+This project is a web-based examination system built using **HTML**, **CSS**, and **JavaScript**. It displays randomized image-based questions, tracks user responses, and calculates the final score with a visual result interface.
 
-🎯 Features and Requirements
+## 📌 Requirements & Features
 
-The application is engineered to deliver a focused and fair examination experience, incorporating the following core requirements:
+1. Questions are stored as an array of objects in JavaScript.  
+   Each object includes:  
+   - `questionTitle`  
+   - `imageAnswers[]`  
+   - `correctAnswer`
 
-Question Structure: Questions are managed as a JavaScript array of 10 objects. Each object contains the title, image answer data (if applicable), and the correct answer index.
+2. All project files are organized into separate folders:  
+   - `index.html`  
+   - `styles.css`  
+   - `script.js`
 
-Organized Codebase: The project is structured using separate, organized files for HTML, CSS, and JavaScript (index.html, style.css, script.js).
+3. The home page prompts the student to enter their name using a CSS popup (e.g. SweetAlert or similar).  
+   Once entered, the **Start** button becomes active.
 
-Aesthetic Design: Features a clean, aligned design using a robust CSS framework/library.
+4. A timer bar (1 minute) is displayed during the exam.  
+   The exam auto-submits when time runs out.
 
-Entry Point: The home page prompts the student for their name via a pop-up and activates the "Start" button upon successful entry.
+5. Only **one question** is displayed at a time.  
+   Navigation is handled via a **Next** button (no Previous button).
 
-Timed Exam: The entire examination is governed by a visible 1-minute timer bar.
+6. Each question includes 3–5 image-based answers.  
+   Example layout:
 
-Navigation: Questions are displayed one at a time with "Next" and "Previous" buttons for navigation.
+7. CSS styling is applied to both questions and answers for clean alignment and responsive design.
 
-Custom Font: Applies the "Every one has the right to freedom" Google Font to the question and answer text for unique styling.
+8. The **Next** button remains disabled until the student selects an answer.
 
-Interaction Guardrail: The "Next" button remains deactivated until the user selects an answer.
+9. Only one answer can be selected per question.  
+The selected answer is highlighted with a gray background.
 
-Visual Feedback: The user's selected answer is highlighted with a gray background immediately upon selection.
+10. Questions and answers are randomized each time the exam runs.
 
-Randomization: Both the sequence of all questions and the order of answers within each question are randomized every time the exam is run.
+11. At the end, the result is displayed as a circular progress bar showing the score percentage.  
+ Example:  
+ ```
+ Your score is: 45%
+ ```
 
-Result Display: Upon answering all questions or when the time runs out, the system displays the final result as a percentage and a count of correct answers (e.g., "You have 9 out of 10 correct answers").
-
-🛠️ Project Structure
-
-The codebase adheres to a simple, organized architecture:
-
-/simple-exam-system
-├── index.html          # Main application structure
-├── style.css           # Styling and layout rules
-└── script.js           # Core quiz logic, DOM manipulation, timer, and result calculation
-
-
-🚀 Running the Project
-
-Clone the Repository:
-
-git clone [Your Repository URL]
+## 🎯 Technologies Used
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
 
-Open: Navigate to the project directory and open index.html in your web browser.
-
-Start: Enter your name in the prompt and click the "Start" button to begin the 1-minute exam.
