@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Examinations System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="Question.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Simple Examinations System</h1>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="welcome-screen">
+            <h2>Welcome to the Exam</h2>
+            <div class="input-group">
+                <label for="studentName">Enter Your Name:</label>
+                <input type="text" id="studentName" placeholder="Your full name...">
+            </div>
+            <button class="btn btn-primary" id="startExamBtn">Start Exam</button>
+        </div>
+
+        <!-- Exam Screen -->
+        <div id="examScreen" class="exam-container hidden">
+            <div class="timer-container">
+                <div class="timer" id="timer">01:00</div>
+                <div class="timer-label">Time Remaining</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-title" id="questionTitle"></div>
+                <div class="question-image" id="questionImage"></div>
+                <div class="answers-container" id="answersContainer"></div>
+            </div>
+
+            <div class="navigation">
+                <button class="btn btn-primary" id="nextBtn" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="results-screen hidden">
+            <h2 class="results-title">Exam Completed!</h2>
+            <div class="score-circle">
+                <svg width="200" height="200" style="transform: rotate(-90deg);">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="#e1e5e9" stroke-width="10"/>
+                    <circle id="scoreCircle" cx="100" cy="100" r="80" fill="none" stroke="#4285f4" stroke-width="10" 
+                            stroke-dasharray="502.65" stroke-dashoffset="502.65" style="transition: stroke-dashoffset 2s ease;"/>
+                </svg>
+                <div class="score-text" id="scorePercentage">0%</div>
+            </div>
+            <div class="score-details" id="scoreDetails"></div>
+            <button class="btn btn-primary" id="restartExamBtn">Take Exam Again</button>
+        </div>
+    </div>
+</body>
+</html>
